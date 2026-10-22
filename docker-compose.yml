@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_DB: analyzer
+      POSTGRES_USER: analyzer
+      POSTGRES_PASSWORD: analyzer_dev_only
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+
+  api:
+    build: .
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    environment:
+      DATABASE_URL: postgresql://analyzer:analyzer_dev_only@db:5432/analyzer
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/srv/app
+    depends_on:
+      - db
+
+volumes:
+  pgdata:

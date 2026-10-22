@@ -1,0 +1,284 @@
+{
+  "_comment": "Seed catalog for the Phase 1 beta. Amounts, limits and dates change yearly: every row carries source_url and last_verified, and anything older than 90 days is flagged for re-verification. Rules of type agency_income_limit / agency_price_limit resolve to 'likely' until the agency's county tables are loaded into MatchContext.agency_limits.",
+  "programs": [
+    {
+      "id": "mhc-smart6",
+      "name": "MHC Smart6",
+      "agency": "Mississippi Home Corporation",
+      "category": "homebuyer",
+      "benefit_text": "30-year fixed mortgage plus $6,000 down payment / closing cost assistance as an interest-free second lien, repaid on sale or refinance. Homebuyer education required.",
+      "amount_max": 6000,
+      "stack_group": "mhc-dpa",
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://moneygeek.com/mortgage/first-time-home-buyer-programs/mississippi",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "state", "params": {"state_fips": "28"}, "description": "Property must be in Mississippi."},
+        {"rule_type": "owner_occupied", "params": {}, "description": "Must be your primary residence."},
+        {"rule_type": "first_time_buyer", "params": {}, "description": "First-time buyer, or no home owned in the past 3 years."},
+        {"rule_type": "agency_income_limit", "params": {"agency": "mhc"}, "description": "Household income must be within MHC limits for the county."},
+        {"rule_type": "agency_price_limit", "params": {"agency": "mhc"}, "description": "Price must be within MHC's county purchase limit."}
+      ]
+    },
+    {
+      "id": "mhc-easy8",
+      "name": "MHC Easy8",
+      "agency": "Mississippi Home Corporation",
+      "category": "homebuyer",
+      "benefit_text": "30-year fixed mortgage plus $8,000 down payment / closing cost assistance. Homebuyer education required.",
+      "amount_max": 8000,
+      "stack_group": "mhc-dpa",
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://moneygeek.com/mortgage/first-time-home-buyer-programs/mississippi",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "state", "params": {"state_fips": "28"}, "description": "Property must be in Mississippi."},
+        {"rule_type": "owner_occupied", "params": {}, "description": "Must be your primary residence."},
+        {"rule_type": "first_time_buyer", "params": {}, "description": "First-time buyer, or no home owned in the past 3 years."},
+        {"rule_type": "agency_income_limit", "params": {"agency": "mhc"}, "description": "Household income must be within MHC limits for the county."},
+        {"rule_type": "agency_price_limit", "params": {"agency": "mhc"}, "description": "Price must be within MHC's county purchase limit."}
+      ]
+    },
+    {
+      "id": "mhc-mrb7",
+      "name": "MHC MRB7",
+      "agency": "Mississippi Home Corporation",
+      "category": "homebuyer",
+      "benefit_text": "Up to $7,000 down payment assistance as a deferred, no-interest loan with a mortgage revenue bond rate.",
+      "amount_max": 7000,
+      "stack_group": "mhc-dpa",
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.totalmortgage.com/locations/state/MS/assistance-programs",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "state", "params": {"state_fips": "28"}, "description": "Property must be in Mississippi."},
+        {"rule_type": "owner_occupied", "params": {}, "description": "Must be your primary residence."},
+        {"rule_type": "first_time_buyer", "params": {}, "description": "First-time buyer, or no home owned in the past 3 years."},
+        {"rule_type": "agency_income_limit", "params": {"agency": "mhc"}, "description": "Household income must be within MHC limits for the county."},
+        {"rule_type": "agency_price_limit", "params": {"agency": "mhc"}, "description": "Price must be within MHC's county purchase limit."}
+      ]
+    },
+    {
+      "id": "mhc-home4all",
+      "name": "MHC Home4All",
+      "agency": "Mississippi Home Corporation",
+      "category": "homebuyer",
+      "benefit_text": "Need-based assistance of up to $25,000. HUD-approved homebuyer counseling required before applying.",
+      "amount_max": 25000,
+      "stack_group": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.bankrate.com/mortgages/mississippi-first-time-homebuyer-assistance-programs",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "state", "params": {"state_fips": "28"}, "description": "Property must be in Mississippi."},
+        {"rule_type": "owner_occupied", "params": {}, "description": "Must be your primary residence."},
+        {"rule_type": "first_time_buyer", "params": {}, "description": "Must be a first-time homebuyer."},
+        {"rule_type": "agency_income_limit", "params": {"agency": "mhc"}, "description": "Need-based: household income must be within program limits."}
+      ]
+    },
+    {
+      "id": "mhc-hat",
+      "name": "MHC Housing Assistance for Teachers",
+      "agency": "Mississippi Home Corporation",
+      "category": "homebuyer",
+      "benefit_text": "Grant of up to $6,000 toward down payment and closing costs for eligible educators.",
+      "amount_max": 6000,
+      "stack_group": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.totalmortgage.com/locations/state/MS/assistance-programs",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "state", "params": {"state_fips": "28"}, "description": "Property must be in Mississippi."},
+        {"rule_type": "owner_occupied", "params": {}, "description": "Must be your primary residence."},
+        {"rule_type": "occupation", "params": {"any_of": ["teacher", "educator"]}, "description": "Must be an eligible educator."}
+      ]
+    },
+    {
+      "id": "mhc-dpa14",
+      "name": "MHC DPA 14",
+      "agency": "Mississippi Home Corporation",
+      "category": "homebuyer",
+      "benefit_text": "$7,000 forgivable 10-year second plus a $7,000 county grant.",
+      "amount_max": 14000,
+      "stack_group": "mhc-dpa",
+      "start_date": null,
+      "end_date": "2026-04-30",
+      "source_url": "https://mshomecorp.com/programs/dpa14",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "counties", "params": {"county_fips": ["28027", "28143", "28151"]}, "description": "Coahoma, Tunica or Washington county only."},
+        {"rule_type": "owner_occupied", "params": {}, "description": "Must be your primary residence."},
+        {"rule_type": "price_max", "params": {"max": 332000}, "description": "Acquisition limit $332,000."},
+        {"rule_type": "agency_income_limit", "params": {"agency": "mhc"}, "description": "Household income must be within MHC limits."}
+      ]
+    },
+    {
+      "id": "usda-502-direct",
+      "name": "USDA Section 502 Direct Loan",
+      "agency": "USDA Rural Development",
+      "category": "homebuyer",
+      "benefit_text": "Government-funded rural mortgage with payment assistance; 5.25% rate effective Sept 1, 2026. Apply through the local USDA RD office or a certified packager.",
+      "amount_max": null,
+      "stack_group": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://rd.usda.gov/programs-services/single-family-housing-direct-home-loans",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "owner_occupied", "params": {}, "description": "Must be your primary residence."},
+        {"rule_type": "tract_flag", "params": {"flag": "usda_eligible"}, "description": "Property must be in a USDA-eligible rural area."},
+        {"rule_type": "income_max_pct_ami", "params": {"pct": 80}, "description": "Household income at or below the low-income limit (80% of area median)."},
+        {"rule_type": "property_type_in", "params": {"types": ["single_family"]}, "description": "Modest single-family home; not income-producing."}
+      ]
+    },
+    {
+      "id": "usda-502-guaranteed",
+      "name": "USDA Section 502 Guaranteed Loan",
+      "agency": "USDA Rural Development",
+      "category": "homebuyer",
+      "benefit_text": "Up to 100% financing through approved private lenders, backed by USDA.",
+      "amount_max": null,
+      "stack_group": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://rd.usda.gov/programs-services/single-family-housing-direct-home-loans",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "owner_occupied", "params": {}, "description": "Must be your primary residence."},
+        {"rule_type": "tract_flag", "params": {"flag": "usda_eligible"}, "description": "Property must be in a USDA-eligible rural area."},
+        {"rule_type": "income_max_pct_ami", "params": {"pct": 115}, "description": "Household income up to 115% of area median."}
+      ]
+    },
+    {
+      "id": "fha-203b",
+      "name": "FHA Loan",
+      "agency": "HUD / FHA",
+      "category": "homebuyer",
+      "benefit_text": "Low down payment (3.5% with qualifying credit), FHA mortgage insurance applies. 1-4 unit properties allowed if you live in one unit.",
+      "amount_max": null,
+      "stack_group": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.hud.gov/buying/loans",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "owner_occupied", "params": {}, "description": "Must be your primary residence."},
+        {"rule_type": "units_max", "params": {"max": 4}, "description": "1-4 units only."}
+      ]
+    },
+    {
+      "id": "fha-203k",
+      "name": "FHA 203(k) Rehab Loan",
+      "agency": "HUD / FHA",
+      "category": "homebuyer",
+      "benefit_text": "Rolls purchase and renovation costs into one FHA mortgage.",
+      "amount_max": null,
+      "stack_group": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.hud.gov/program_offices/housing/sfh/203k",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "owner_occupied", "params": {}, "description": "Must be your primary residence."},
+        {"rule_type": "units_max", "params": {"max": 4}, "description": "1-4 units only."},
+        {"rule_type": "rehab_needed", "params": {}, "description": "Only useful when the property needs rehab."}
+      ]
+    },
+    {
+      "id": "va-home-loan",
+      "name": "VA Home Loan",
+      "agency": "U.S. Department of Veterans Affairs",
+      "category": "homebuyer",
+      "benefit_text": "No down payment and no private mortgage insurance for eligible service members and veterans.",
+      "amount_max": null,
+      "stack_group": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.va.gov/housing-assistance/home-loans/",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "owner_occupied", "params": {}, "description": "Must be your primary residence."},
+        {"rule_type": "veteran", "params": {}, "description": "Must have VA eligibility (Certificate of Eligibility)."},
+        {"rule_type": "units_max", "params": {"max": 4}, "description": "1-4 units only."}
+      ]
+    },
+    {
+      "id": "oz-2-0",
+      "name": "Opportunity Zone 2.0",
+      "agency": "U.S. Treasury / IRS",
+      "category": "tax",
+      "benefit_text": "Reinvest capital gains through a Qualified Opportunity Fund: deferral, a 10% basis step-up after 5 years, and tax-free appreciation after 10 years. New map runs Jan 1, 2027 - Dec 31, 2036.",
+      "amount_max": null,
+      "stack_group": "oz",
+      "start_date": "2027-01-01",
+      "end_date": "2036-12-31",
+      "source_url": "https://www.jw.com/news/insights-texas-qualified-opportunity-zone-tracts/",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "tract_flag", "params": {"flag": "oz_2_0"}, "description": "Property must be in a designated OZ 2.0 tract."},
+        {"rule_type": "capital_gains", "params": {}, "description": "Requires capital gains to reinvest through a Qualified Opportunity Fund."},
+        {"rule_type": "strategy_in", "params": {"strategies": ["rental", "commercial", "tax"]}, "description": "Investment property only; not for a personal residence."}
+      ]
+    },
+    {
+      "id": "oz-2-0-rural",
+      "name": "Rural Opportunity Zone (QROF)",
+      "agency": "U.S. Treasury / IRS",
+      "category": "tax",
+      "benefit_text": "Qualified Rural Opportunity Fund holding 90%+ in rural OZ property: 30% basis step-up after 5 years (vs. 10%) and a lower substantial-improvement threshold.",
+      "amount_max": null,
+      "stack_group": "oz",
+      "start_date": "2027-01-01",
+      "end_date": "2036-12-31",
+      "source_url": "https://www.bernsteinshur.com/insights-events/opportunity-zones-2-0-a-new-era-for-investment-especially-in-rural-communities/",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "tract_flag", "params": {"flag": "oz_2_0"}, "description": "Property must be in a designated OZ 2.0 tract."},
+        {"rule_type": "tract_flag", "params": {"flag": "rural_flag"}, "description": "Tract must meet the OZ 2.0 rural definition."},
+        {"rule_type": "capital_gains", "params": {}, "description": "Requires capital gains to reinvest through a Qualified Rural Opportunity Fund."},
+        {"rule_type": "strategy_in", "params": {"strategies": ["rental", "commercial", "tax"]}, "description": "Investment property only; not for a personal residence."}
+      ]
+    },
+    {
+      "id": "oz-1-0",
+      "name": "Opportunity Zone 1.0 (legacy)",
+      "agency": "U.S. Treasury / IRS",
+      "category": "tax",
+      "benefit_text": "Original OZ tracts remain designated through Dec 31, 2028. Confirm current rules with a tax advisor before investing.",
+      "amount_max": null,
+      "stack_group": "oz",
+      "start_date": null,
+      "end_date": "2028-12-31",
+      "source_url": "https://ded.mo.gov/content/opportunity-zones",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "tract_flag", "params": {"flag": "oz_1_0"}, "description": "Property must be in an original (2018) OZ tract."},
+        {"rule_type": "capital_gains", "params": {}, "description": "Requires capital gains to reinvest through a Qualified Opportunity Fund."},
+        {"rule_type": "strategy_in", "params": {"strategies": ["rental", "commercial", "tax"]}, "description": "Investment property only; not for a personal residence."}
+      ]
+    },
+    {
+      "id": "lihtc-qct-dda",
+      "name": "LIHTC basis boost (QCT / DDA)",
+      "agency": "HUD / Mississippi Home Corporation",
+      "category": "developer",
+      "benefit_text": "Affordable multifamily in a Qualified Census Tract or Difficult Development Area can claim up to a 30% boost to eligible basis for Low-Income Housing Tax Credits.",
+      "amount_max": null,
+      "stack_group": null,
+      "start_date": null,
+      "end_date": null,
+      "source_url": "https://www.huduser.gov/portal/datasets/qct.html",
+      "last_verified": "2026-10-22",
+      "rules": [
+        {"rule_type": "any_tract_flag", "params": {"flags": ["qct", "dda"]}, "description": "Tract must be a HUD QCT or DDA."},
+        {"rule_type": "property_type_in", "params": {"types": ["multifamily", "land"]}, "description": "Multifamily development or land for one."},
+        {"rule_type": "strategy_in", "params": {"strategies": ["rental", "tax", "commercial"]}, "description": "Investment or development strategy."}
+      ]
+    }
+  ]
+}

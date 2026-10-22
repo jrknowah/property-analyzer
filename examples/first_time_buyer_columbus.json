@@ -1,0 +1,60 @@
+{
+  "property": {
+    "parcel_id": "sample-lowndes-001",
+    "address": "200 Sample Ave",
+    "city": "Columbus",
+    "county_fips": "28087",
+    "price": 165000.0,
+    "property_type": "single_family",
+    "units": 1,
+    "bedrooms": 3,
+    "zoning_type": "residential",
+    "fema_zone": "X",
+    "annual_tax": 1400.0,
+    "est_rehab": 0.0,
+    "tract": {
+      "tract_geoid": "28087000100",
+      "county_fips": "28087",
+      "median_hh_income": 47000,
+      "population_5yr_pct": 1.0,
+      "vacancy_rate": 12.0,
+      "unemployment_rate": 5.0,
+      "oz_1_0": false,
+      "oz_2_0": false,
+      "rural_flag": false,
+      "usda_eligible": true,
+      "qct": false,
+      "dda": false
+    },
+    "events": []
+  },
+  "budget": {
+    "max_price": 180000.0,
+    "cash_available": 6000.0,
+    "target_coc_pct": 8.0,
+    "financing": "fha",
+    "interest_rate_pct": 6.5,
+    "loan_term_years": 30,
+    "household_size": 3,
+    "household_income": 52000,
+    "first_time_buyer": true,
+    "veteran": false,
+    "occupation": "teacher",
+    "has_capital_gains": null
+  },
+  "strategy": "personal",
+  "rent": {
+    "monthly_rent_per_unit": null,
+    "fmr_per_unit": null,
+    "vacancy_pct": 8.0,
+    "management_pct": 9.0,
+    "maintenance_pct": 6.0,
+    "annual_insurance": null,
+    "other_annual_opex": 0.0
+  },
+  "as_of": "2026-10-22",
+  "reference": {
+    "area_median_income": null,
+    "agency_limits": {}
+  }
+}
